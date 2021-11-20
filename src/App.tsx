@@ -1,13 +1,16 @@
 import React from "react"
 import { SafeAreaView, StatusBar } from "react-native"
-import { HomeScreen } from "./screens/Home"
+import { HomeScreen } from "./screens/Home.screen"
+import { StoreProvider } from "./store/StoreContext"
 
 const App = () => (
-    <SafeAreaView>
-        <StatusBar backgroundColor="hotpink" barStyle="dark-content" />
+    <StoreProvider>
+        <SafeAreaView>
+            <StatusBar backgroundColor="hotpink" barStyle="dark-content" />
 
-        <HomeScreen />
-    </SafeAreaView>
+            <HomeScreen />
+        </SafeAreaView>
+    </StoreProvider>
 )
 
 export default App
